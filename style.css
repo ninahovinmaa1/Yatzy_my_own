@@ -1,0 +1,53 @@
+/*STYLING: Create a Score sheet for a game of Yatzy with html and css.
+1) Remove default border-spacing. DONE
+2) Add basic borders in each cell. DONE
+3) Add thick borders around table (outline) and around each cell in sum and bonus rows. DONE
+4) Second and fourth column: Add background color Water, light blue. DONE
+5) Cell for Player, Sum, Bonus, Total: Guppy green background color. DONE
+6) Special rows (player, sum, bonus, total) with input cells: Add background color Capri blue. Background color light grey should override 
+color medium grey in second and fourth row. DONE.
+7)Add padding and align text to the left in each cell. NOT WORKING
+8)Add input cells. Done
+9) Modify input with css
+*/
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    border-collapse: collapse;  /*removes default border-spacing to remove gaps in between cells.*/
+}
+
+td, th {                        /*Adds padding and aligns text to the left in each cell. NOT WORKING */
+    padding: 5px;
+    text-align: left;
+}
+
+tr, td {                        /*basic borders for each cell*/
+    border: 1px solid black;
+}
+
+.boldBorders {                   /* bold borders for outline of table + rows player, sum, bonus, total and the cells in these rows. */
+    border: 1.5px solid black;
+}
+
+
+#player, #sum, #bonus, #total {     /*Cells for Player, Sum, Bonus, Total. Guppy green color.*/
+    background-color: #00FF7F;
+}
+
+td:nth-child(even) {                /* Second and fourth column: Add background color Water (light blue).*/
+    background-color: #D4F1F9;
+}
+
+.specialRowInputCells td {
+    background-color: #00BFFF;      /*Special rows (player, sum, bonus, total) with input cells: Add background color Capri blue. Background color Capri blue overrides color Water (light blue) in second and fourth column.*/
+} 
+
+input {
+    width: 50px;
+    border: none;
+    background: transparent;
+}
+
